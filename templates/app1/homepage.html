@@ -1,0 +1,21 @@
+{% load pwa %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% progressive_web_app_meta %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Covid-19 life countdown</title>
+
+
+    <link rel="manifest" href="{% static 'manifest.json' %}">
+
+</head>
+<body>
+{{ confirmed }}
+
+</body>
+</html>

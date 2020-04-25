@@ -1,0 +1,23 @@
+{
+    "name" : "COVIDLIFE",
+    "short_name": "COVIDLIFE",
+    "start_url": "homepage.html",
+    "display" : "standalone",
+    "background_color" : "#FFE9D2",
+    "theme_color" : "#FFE1C4",
+    "orientation" : "portrait-primary",
+
+    "icons" : [
+        {
+            "src" : "/static/img/corona.png",
+            "type" : "image/png",
+            "sizes" : "192x192"
+        },
+        {
+            "src" : "/static/img/corona144.png",
+            "type" : "image/png",
+            "sizes" : "144x144"
+        }
+    ]
+
+}
