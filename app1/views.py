@@ -1,16 +1,16 @@
 from django.shortcuts import render
-import requests
-# Create your views here.
+from .forms import CountryForm
+from . import services
 
 
 def homepage(request):
-    confirmed = "Confirmed"
-    death = "Deaths"
-    recover = "Recovered"
-    country = "azerbaijan"
-    response = requests.get(f'https://api.covid19api.com/country/{country}')
-    country_data = response.json()
-    latest_day = country_data[len(country_data)-1]
-    return render(request, 'app1/homepage.html', {
-        'confirmed': latest_day[confirmed],
-    })
+    """ redner form to search """
+    form = CountryForm()
+    if request.method == "POST":
+        form = CountryForm(request.POST)
+        if form.is_valid():
+            country = form.cleaned_data['name']
+            result_set = services.get_by_country(country)
+            return render(request, 'app1/homepage.html', {'form': form, 'result_set': result_set})
+        return render(request, 'app1/homepage.html', {'form': form})
+    return render(request, 'app1/homepage.html', {'form': form})
