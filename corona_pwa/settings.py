@@ -127,7 +127,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 
 # PWA SETTINGS
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js') # define our own service worker
+
 PWA_APP_NAME = 'Covid-19Life'
 PWA_APP_DESCRIPTION = "Life update on COVID-19"
 PWA_APP_THEME_COLOR = '#FFE1C4'

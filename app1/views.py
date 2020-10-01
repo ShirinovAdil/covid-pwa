@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from .forms import CountryForm
 from . import services
 
@@ -14,3 +14,8 @@ def homepage(request):
             return render(request, 'app1/homepage.html', {'form': form, 'result_set': result_set})
         return render(request, 'app1/homepage.html', {'form': form})
     return render(request, 'app1/homepage.html', {'form': form})
+
+
+def countries(request):
+    summary_list = services.get_all_countries()
+    return render(request, 'app1/all_countries.html', {'summary_list': summary_list})

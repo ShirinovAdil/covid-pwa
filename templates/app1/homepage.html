@@ -21,7 +21,10 @@
 
     <div class="container">
 
-        <h1 class="jumbotron text-center">COVID-19 statistics</h1>
+        <div class="jumbotron text-center">
+            <h1>COVID-19 statistics</h1>
+            <a href="{% url 'countries' %}">Get all countries</a>
+        </div>
             <form method="POST" class="col-md-5 offset-md-4 col-sm-12">
                 {% csrf_token %}
                 <div class="row">
