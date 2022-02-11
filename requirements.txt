@@ -114,7 +114,7 @@ sqlparse==0.3.1
 sshtunnel==0.1.4
 systemd-python==234
 toml==0.10.0
-Twisted==20.3.0
+Twisted==22.1.0
 txaio==20.4.1
 ubuntu-advantage-tools==20.3
 ubuntu-drivers-common==0.0.0
