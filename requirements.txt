@@ -76,7 +76,7 @@ paramiko==2.6.0
 passlib==1.7.2
 pexpect==4.6.0
 Pillow==7.1.0
-protobuf==3.6.1
+protobuf==3.18.3
 protonvpn-cli==2.2.4
 psutil==5.6.6
 psycopg2==2.8.5
